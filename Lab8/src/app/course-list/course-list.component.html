@@ -1,0 +1,20 @@
+<br />
+<div class="container">
+    <button (click)="showAllCourses()" class="btn btn-success mybutton">
+        Show All Courses
+    </button>
+    <button (click)="showLowpriceCourses()" class="btn btn-success mybutton">
+        Show Low-Price Courses
+    </button>
+    <button (click)="showOnlineCourses()" class="btn btn-success mybutton">
+        Show Online Courses
+    </button>
+</div>
+<br />
+<div>
+    <h2> Results : {{ courseCount}} </h2>
+</div>
+<br />
+<div *ngFor="let mycourse of mycoursesToDisplay" class="container">
+    <jlc-course [MyCourseData]="mycourse"> </jlc-course>
+</div>

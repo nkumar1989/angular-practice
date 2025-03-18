@@ -1,0 +1,14 @@
+<div class="card">
+
+    <div class="card-header">
+        <h4> {{MyCourseData.cname}} Training (Code : {{MyCourseData.cid }})
+            <button (click)="showCourseInfo()" class="btn btn-success" style="float: right;"> More
+                Info</button>
+        </h4>
+    </div>
+    <div *ngIf="showCourseFlag" class="card-body">
+        <h5 class="card-title"> Trainer : {{ MyCourseData.trainer}} </h5>
+        <h5 class="card-title"> Price : {{ MyCourseData.price}} </h5>
+        <h5 class="card-title"> isOnline : {{ MyCourseData.isOnline}} </h5>
+    </div>
+</div>

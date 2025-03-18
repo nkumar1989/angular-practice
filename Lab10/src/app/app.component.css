@@ -1,0 +1,26 @@
+.mainBox {
+    padding-left: 150px;
+    padding-right: 150px;
+}
+
+.myborder {
+    border: 2px solid red;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    padding: 25px;
+}
+
+.mydiv,
+span,
+input {
+    font-size: 25px;
+    font-family: Cambria;
+}
+
+p {
+    font-family: Cambria;
+    font-size: 30px;
+    color: black;
+    background-color: rgb(52, 220, 226);
+    font-weight: bold;
+}

@@ -1,0 +1,27 @@
+<h2 class="text-center"> Welcome to Java Learning Center </h2>
+<h2 class="text-center">Student Info</h2>
+<br />
+<div class="container">
+  <input type="text" [(ngModel)]="courseName" class="form-control form-control-lg" />
+  <br />
+  <table class="table table-striped table-bordered table-sm">
+    <thead>
+      <th>SID</th>
+      <th>Sname</th>
+      <th>Phone</th>
+      <th>Course</th>
+      <th>Feepaid</th>
+      <th>Date of Joining</th>
+    </thead>
+    <tbody>
+      <tr *ngFor="let mystu of mystudents | mysearch:courseName">
+        <td> {{mystu.sid }}</td>
+        <td> {{mystu.sname | myupper:null }}</td>
+        <td> {{mystu.phone | myphone:mystu.countryCode}}</td>
+        <td> {{mystu.course }}</td>
+        <td>{{mystu.feepaid | currency:"Rs."}} </td>
+        <td> {{mystu.doj | date:"fullDate"}} </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

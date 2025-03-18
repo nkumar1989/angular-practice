@@ -1,0 +1,61 @@
+<div>
+  <p class="myheader"> Welcome to Java Learning Center</p>
+  <div class="mydata">
+    <table>
+      <thead>
+        <tr>
+          <th> SID </th>
+          <th> SName</th>
+          <th> Email </th>
+          <th> Office Phone</th>
+          <th> Home Phone</th>
+          <th> City</th>
+          <th> State</th>
+          <th></th>
+          </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let mystudent of mystudentsData">
+              <td> {{ mystudent.studentId}} </td>
+              <td> {{ mystudent.studentName}} </td>
+              <td> {{ mystudent.emailId}} </td>
+              <td> {{ mystudent.phones.office}} </td>
+              <td> {{ mystudent.phones.home}} </td>
+              <td> {{ mystudent.address.city}} </td>
+              <td> {{ mystudent.address.state}} </td>
+              <td>
+                <button class="mybutton" (click)="showCourseInfo(mystudent.studentId)">
+                  Course Info </button>
+                <button class="mybutton" (click)="showCourseData(mystudent.mycourses,mystudent.studentId)">
+                  Course Data </button>
+              </td>
+            </tr>
+          </tbody>
+          </table>
+          </div>
+          <div class="mydata" *ngIf="showCourseFlag">
+            <div>
+              <p class="myheader"> Course Details of Student {{sidToDisplay}} </p>
+            </div>
+            <table>
+              <thead>
+                <tr>
+                  <th> CID </th>
+                  <th> CName</th>
+                  <th> Price </th>
+                  <th> Trainer</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let mycourse of coursesToDisplay">
+                  <td> {{ mycourse.cid}} </td>
+                  <td> {{ mycourse.cname}} </td>
+                  <td> {{ mycourse.price}} </td>
+                  <td> {{ mycourse.trainer}} </td>
+                </tr>
+              </tbody>
+              </table>
+              </div>
+              <br /><br /><br /><br /><br />
+              <br /><br /><br /><br /><br />
+              </div>

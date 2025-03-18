@@ -1,0 +1,29 @@
+<h2 class="text-center"> Welcome to Java Learning Center </h2>
+<h2 class="text-center">Student Info</h2>
+<br />
+<div class="container">
+  <table class="table table-striped table-bordered table-sm">
+    <thead>
+      <th>SID</th>
+      <th>Sname</th>
+      <th>Phone</th>
+      <th>Course</th>
+      <th>Feepaid</th>
+      <th>Date of Joining</th>
+    </thead>
+    <tbody>
+      <tr *ngFor="let mystu of mystudents | slice:mystart:myend">
+          <td> {{mystu.sid}}</td>
+          <!--<td> {{mystu.sname|uppercase}}</td>-->
+          <td> {{mystu.sname| titlecase}}</td>
+          <td> {{mystu.phone}}</td>
+          <td> {{mystu.course | lowercase}}</td>
+          <!--<td>{{mystu.feepaid | currency:"$"}} </td>
+          <td> {{mystu.doj | date:"dd-MM-yyyy"}} </td>-->
+          <td>{{mystu.feepaid | currency:mystu.currencyCode}} </td>
+          <td> {{mystu.doj | date:mystu.dateFormat}} </td>
+
+        </tr>
+    </tbody>
+    </table>
+    </div>

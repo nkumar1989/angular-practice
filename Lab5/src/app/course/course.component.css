@@ -1,0 +1,15 @@
+.mycourse{
+
+        font-size: 25px;
+        color: blue;
+        margin: 25px;
+        padding: 15;
+        border: 2px solid green;
+
+}
+
+.mybutton {
+        font-size: 25px;
+        color: white;
+        background-color: red;
+}

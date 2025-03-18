@@ -1,0 +1,12 @@
+<button class="mybutton" (click)="showCourseInfo()">
+Course Info
+</button>
+<div class="mycourse" *ngIf="courseFlag">
+
+    <p> Course Id: {{mycourse.courseId}} </p>
+    <p> Course Name: {{mycourse.courseName}} </p>
+    <p> Course Cost: {{mycourse.cost}} </p>
+    <p> Course Trainer: {{mycourse.trainer}} </p>
+
+
+</div>

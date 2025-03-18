@@ -1,0 +1,23 @@
+<div *ngIf="myEnrollmentsData.enrollmentShow">
+    <h3> Today's Lead Count : {{ myEnrollmentsData.enrollmentCount}}</h3>
+    <table class="table table-light table-striped table-bordered">
+        <thead class="thead-dark">
+            <th> Lead Id</th>
+            <th> SId</th>
+            <th> Name </th>
+            <th> Course </th>
+            <th> Fee paid </th>
+            <th> Fee bal </th>
+        </thead>
+        <tbody>
+            <tr *ngFor="let myenroll of myEnrollmentsData.myenrollments">
+                <td> {{ myenroll.leadId}}</td>
+                <td> {{ myenroll.sid}}</td>
+                <td> {{ myenroll.sname}}</td>
+                <td> {{ myenroll.course}}</td>
+                <td> {{ myenroll.feepaid}}</td>
+                <td> {{ myenroll.feebal}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

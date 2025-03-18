@@ -1,0 +1,12 @@
+<h2 class="text-center"> Welcome to Java Learning Center </h2>
+<br />
+<h2 class="text-center"> Init Destroy Demo</h2>
+<div class="container">
+  <button (click)="showHideHello()" class="btn btn-success btn-large">
+    <h1 class="display-4"> show and Hide Hello Component </h1>
+  </button>
+</div>
+<br />
+<div *ngIf="display">
+  <myhello> </myhello>
+</div>

@@ -1,0 +1,9 @@
+.mystudent{
+
+    font-size: 25px;
+    color: blue;
+    margin-left: 250px;
+    margin-top: 50px;
+    width: 50%;
+    border: 2px solid red;
+}

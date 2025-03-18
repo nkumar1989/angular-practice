@@ -1,0 +1,62 @@
+<div>
+  <p class="myheader"> Welcome to Java Learning CEnter</p>
+  <div class="mydata">
+    <h3> <u>1. Simple Type Properties </u></h3>
+    <p> Sid : {{sid }} </p>
+    <p> Sname : {{sname }} </p>
+    <p> Dob : {{dob }} </p>
+    <p> isActive : {{isActive }} </p>
+  </div>
+  <div class="mydata">
+    <h3> <u>2. Object of ANY Type </u></h3>
+    <p> Course Id : {{mycourse1.cid }} </p>
+    <p> Course Name : {{mycourse1.cname }} </p>
+    <p> Price : {{mycourse1.price }} </p>
+    <p> Trainer : {{mycourse1.trainer }} </p>
+  </div>
+  <div class="mydata">
+    <h3> <u>3. Object of Course Type </u></h3>
+    <p> Course Id : {{mycourse2.courseId }} </p>
+    <p> Course Name : {{mycourse2.courseName }} </p>
+    <p> Price : {{mycourse2.cost }} </p>
+    <p> Trainer : {{mycourse2.trainer }} </p>
+  </div>
+
+  <div class="mydata">
+    <h3> <u>4. Array of Simple Types </u></h3>
+    <ul>
+      <li *ngFor="let courseName of mycourseNames">
+        {{ courseName }}
+      </li>
+    </ul>
+  </div>
+  <div class="mydata">
+    <h3> <u>5. Array of Course Objects</u></h3>
+    <table>
+      <thead>
+        <tr>
+          <td> Course Id </td>
+          <td> Course Name </td>
+          <td> Cost </td>
+          <td> Trainer </td>
+          <td> </td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let mycourse of mycourseList">
+          <td> {{ mycourse.courseId}} </td>
+          <td> {{ mycourse.courseName}} </td>
+          <td> {{ mycourse.cost}} </td>
+          <td> {{ mycourse.trainer}} </td>
+          <td>
+            <button (click)="showMoreInfo(mycourse.courseId);" class="mybutton">
+              More Info
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <br /><br /><br /><br /><br />
+  <br /><br /><br /><br /><br />
+  </div>

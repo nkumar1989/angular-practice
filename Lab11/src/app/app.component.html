@@ -1,0 +1,36 @@
+<div class="container">
+  <h3 class="text-center"> Welcome to CourseCube!!!</h3>
+  <p> 1. CSS Properties - Static Way </p>
+  <div style="color:red;border:2px solid blue;font-size:20px;border: 2px;padding:10px">
+    Hello Guys, You are learning Angular 9 from Srinivas Dande
+  </div>
+  <br /><br />
+  <p> 2. CSS Properties - Dynamic Way </p>
+  <div [ngStyle]="{color:mycolor,border:myborder}" [style.font-size.px]="myfontSize"
+    [style.border-radius.px]="myborderRadius" [style.padding.px]="mypadding">
+    Hello Guys, You are learning Angular 9 from Srinivas Dande
+  </div>
+  <br />
+  <button (click)="changeStyles();"> Change Styles</button>
+  <br /><br />
+  <p>3. CSS Classes - Static Way </p>
+  <div class="myclass1 myclass2 myred">
+    Hello Guys, You are learning Angular 9 from Srinivas Dande
+  </div>
+  <br /><br />
+  <p>4. CSS Classes - Dynamic Way </p>
+  <div [ngClass]="myclassList">
+    Hello Guys, You are learning Angular 9 from Srinivas Dande
+  </div>
+  <br />
+  <button (click)="changeClasses();"> Change Classes</button>
+  <br /><br />
+  <p>5. Using ngNonBinding</p>
+  <div [ngClass]="myclassList">
+    <span ngNonBindable> Angular Expressions looks like {{ welcomeMsg}} </span>
+    <br />
+    <span> Angular Expressions looks like {{ welcomeMsg}} </span>
+  </div>
+  <br /><br />
+  </div>
+  <br /><br /><br /><br /><br /><br /><br />

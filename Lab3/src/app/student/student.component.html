@@ -1,0 +1,14 @@
+<button class="mybutton" (click)="showStudentInfo()">
+ 
+    Student Info
+
+</button>
+
+<div class="mystudent" *ngIf="studentFlag">
+
+    <p>Student ID:{{ mystudent.sid }}</p>
+    <p>Name:{{ mystudent.sname }}</p>
+    <p>Email:{{ mystudent.email }}</p>
+    <p>Phone:{{ mystudent.phone }}</p>
+<jlc-course></jlc-course>
+</div>

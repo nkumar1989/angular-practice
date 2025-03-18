@@ -1,0 +1,36 @@
+.myheader {
+    font-size: 25px;
+    color: red;
+    text-align: center;
+}
+
+.mydata {
+    font-size: 20px;
+    margin-left: 10px;
+    padding: 10px;
+}
+
+table {
+    width: 100%;
+    border: 1px solid lightblue;
+    border-collapse: collapse;
+}
+
+tr,
+td {
+    border: 1px solid lightblue;
+    border-collapse: collapse;
+    text-align: center;
+    line-height: 2.5em;
+}
+th {
+    background-color: teal;
+    color: white;
+}
+
+.mybutton {
+    font-size: 20px;
+    color: white;
+    background-color: teal;
+    margin: 5px;
+}

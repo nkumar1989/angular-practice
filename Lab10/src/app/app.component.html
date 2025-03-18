@@ -1,0 +1,91 @@
+<div class="container">
+  <h3 class="text-center"> Welcome to Java Learning Center!!!</h3>
+  <p> 1. ngIF Demo </p>
+  <div class="myborder">
+    <h2> You have selected {{ courseName }} </h2>
+    <span> Select Course </span>
+    <select [(ngModel)]="courseName">
+      <option value=""> --- Select Course --- </option>
+      <option value="Angular"> Angular </option>
+      <option value="React"> React JS</option>
+      <option value="Vue"> Vue JS </option>
+      <option value="NodeJS"> NodeJS </option>
+    </select>
+    <br /> <br />
+    <div class="mydiv" *ngIf="courseName==''">
+      Please Select One Course<br />
+      Please Select One Course<br />
+    </div>
+    <div class="mydiv" *ngIf="courseName=='Angular'">
+      Angular Course Seleted <br />
+      Angular Course Seleted <br />
+      Angular Course Seleted <br />
+      Angular Course Seleted <br />
+    </div>
+    <div class="mydiv" *ngIf="courseName=='React'">
+      React Course Seleted <br />
+      React Course Seleted <br />
+      React Course Seleted <br />
+      React Course Seleted <br />
+    </div>
+    <div class="mydiv" *ngIf="courseName=='Vue' || courseName=='NodeJS'">
+      {{courseName}} Not Available now <br />
+      {{courseName}} Not Available now <br />
+      {{courseName}} Not Available now <br />
+    </div>
+  </div>
+  <p> 2. ngSwitch Demo </p>
+  <div class="myborder">
+    <h2> You have selected {{ mycourse }} </h2>
+    <span> Select Course </span>
+    <select [(ngModel)]="mycourse" style="font-size:25px">
+      <option value=""> --- Select Course --- </option>
+      <option value="Java"> Java </option>
+      <option value="Python"> Python </option>
+      <option value="GoLang"> GoLang </option>
+      <option value="Scala"> Scala </option>
+      <option value="c++"> C++ </option>
+    </select>
+    <div class="mydiv" [ngSwitch]="mycourse">
+      <div *ngSwitchCase="''">
+        Please Select One Course<br />
+        Please Select One Course<br />
+      </div>
+      <div *ngSwitchCase="'Java'">
+        Java8 Course Seleted <br />
+        Java8 Course Seleted <br />
+      </div>
+      <div *ngSwitchCase="'Java'">
+        Java13 Course Seleted <br />
+        Java13 Course Seleted <br />
+      </div>
+      <div *ngSwitchCase="'Python'">
+        Python Course Seleted <br />
+        Python Course Seleted <br />
+      </div>
+      <div *ngSwitchCase="'GoLang'">
+        GoLang Course Seleted <br />
+        GoLang Course Seleted <br />
+      </div>
+      <div *ngSwitchDefault>
+        {{ mycourse}} is not Avaiable.<br />
+        {{ mycourse}} is not Avaiable.<br />
+        {{ mycourse}} is not Avaiable.<br />
+      </div>
+    </div>
+  </div>
+  <p> 3. ngFor Demo </p>
+  <div class="myborder">
+    <ul>
+      <li *ngFor="let cou of mycourses">
+        {{ cou }}
+      </li>
+    </ul>
+  
+    <br />
+    <div class="mydiv" *ngFor="let cou of mycourses; let num = index">
+      <div> {{ num+1 }} --- {{ cou }}</div>
+    </div>
+  </div>
+  </div>
+  <br /><br /><br /><br /><br /><br /><br />
