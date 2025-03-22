@@ -1,0 +1,44 @@
+<div class="apply-home-loan">
+    <h2>Apply for Home Loan</h2>
+    <div *ngIf="selectedOffer">
+        <p><strong>Offer ID:</strong> {{ selectedOffer.offerId }}</p>
+        <p><strong>Bank:</strong> {{ selectedOffer.bank }}</p>
+        <p><strong>Interest Rate:</strong> {{ selectedOffer.interestRate }}</p>
+        <p><strong>Max Loan Amount:</strong> {{ selectedOffer.maxLoanAmount }}</p>
+        <p><strong>Tenure:</strong> {{ selectedOffer.tenure }}</p>
+    </div>
+   <!-- <form (ngSubmit)="submitApplication()">
+        <label for="name">Name:</label>
+        <input id="name" type="text" name="name" required />
+        <label for="email">Email:</label>
+        <input id="email" type="email" name="email" required />
+        <button type="submit">Submit Application</button>
+    </form>-->
+<form [formGroup]="loanForm" (ngSubmit)="submitApplication()">
+    <label for="name">Name:</label>
+    <input id="name" type="text" formControlName="name" />
+    <!-- Display validation errors for Name -->
+    <div *ngIf="loanForm.get('name')?.touched && loanForm.get('name')?.invalid">
+        <small *ngIf="loanForm.get('name')?.errors?.['required']">
+            Name is required.
+        </small>
+        <small *ngIf="loanForm.get('name')?.errors?.['pattern']">
+            Name must contain only letters and spaces.
+        </small>
+    </div>
+
+    <label for="email">Email:</label>
+    <input id="email" type="email" formControlName="email" />
+    <!-- Display validation errors for Email -->
+    <div *ngIf="loanForm.get('email')?.touched && loanForm.get('email')?.invalid">
+        <small *ngIf="loanForm.get('email')?.errors?.['required']">
+            Email is required.
+        </small>
+        <small *ngIf="loanForm.get('email')?.errors?.['email']">
+            Please enter a valid email address.
+        </small>
+    </div>
+
+    <button type="submit" [disabled]="loanForm.invalid">Submit Application</button>
+</form>
+</div>

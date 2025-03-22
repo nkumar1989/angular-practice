@@ -1,0 +1,30 @@
+<div class="home-loan-offers">
+    <h2>Home Loan Offers</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Offer ID</th>
+                <th>Bank</th>
+                <th>Interest Rate</th>
+                <th>Max Loan Amount</th>
+                <th>Tenure</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let offer of offers">
+                <td>{{ offer.offerId }}</td>
+                <td>{{ offer.bank }}</td>
+                <td>{{ offer.interestRate }}</td>
+                <td>{{ offer.maxLoanAmount }}</td>
+                <td>{{ offer.tenure }}</td>
+                <td>
+                    <button (click)="applyForLoan(offer)">Apply</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div class="navigation-buttons">
+    <button (click)="navigateBack()">Back</button>
+    <button (click)="navigateNext()">Next</button>
+</div>
