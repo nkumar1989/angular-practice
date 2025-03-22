@@ -10,6 +10,8 @@ import { HomeLoanOffersComponent } from './home-loan-offers/home-loan-offers.com
 import { ApplyHomeLoanComponent } from './apply-home-loan/apply-home-loan.component';
 import { ApplicationSuccessComponent } from './application-success/application-success.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { LandingComponent } from './landing/landing.component';
+import { UserHomeLoanDetailsComponent } from './user-home-loan-details/user-home-loan-details.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +21,9 @@ import { ReactiveFormsModule } from '@angular/forms';
     NavbarComponent,
     HomeLoanOffersComponent,
     ApplyHomeLoanComponent,
-    ApplicationSuccessComponent
+    ApplicationSuccessComponent,
+    LandingComponent,
+     UserHomeLoanDetailsComponent,
   ],
   imports: [
     BrowserModule,

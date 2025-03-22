@@ -48,7 +48,7 @@ export class DashboardComponent implements OnInit {
 
   navigateBack() {
     // Logic to go to the previous page
-    this.router.navigate(['/login']); // Replace with the actual route
+    this.router.navigate(['/landing']); // Replace with the actual route
   }
 
   navigateNext() {

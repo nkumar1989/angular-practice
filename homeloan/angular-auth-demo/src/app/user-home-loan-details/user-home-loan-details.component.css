@@ -1,0 +1,29 @@
+.details-page {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 20px;
+}
+
+.header {
+    background-color: #6a11cb;
+    color: white;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.details {
+    margin: 20px 0;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #2575fc;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #1a5bbf;
+}

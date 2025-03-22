@@ -1,0 +1,29 @@
+<div class="welcome-page">
+    <header class="header">
+        <h1>Welcome to Home Loan Application</h1>
+        <p>Find the best loan options tailored just for you.</p>
+    </header>
+
+    <section class="features">
+        <h2>Why Choose Us?</h2>
+        <ul>
+            <li>Low interest rates</li>
+            <li>Flexible repayment options</li>
+            <li>Quick and hassle-free application process</li>
+        </ul>
+    </section>
+
+    <section class="cta">
+        <h2>Get Started Today!</h2>
+        <button (click)="applyNow()">Avail HomeLoan Offers</button>
+    </section>
+
+    <section class="homeloanApplied" *ngIf="isAdmin">
+        <button (click)="getHomeLoanappliedDetails()">See HomeLoan Applied</button>
+    </section>
+
+    <section class="myHomeLoanDetails" *ngIf="!isAdmin">
+        <button (click)="getMyHomeLoanDetails()">See HomeLoan Details</button>
+    </section>
+
+</div>

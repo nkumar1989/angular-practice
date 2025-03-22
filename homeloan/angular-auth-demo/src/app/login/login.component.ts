@@ -20,7 +20,7 @@ export class LoginComponent {
       localStorage.setItem('isLoggedIn', 'true');
        localStorage.setItem('username', this.username); // Store username
        localStorage.setItem('role', this.role);
-      this.router.navigate(['/dashboard']);
+      this.router.navigate(['/landing']);
     } else {
       alert('Invalid Credentials');
     }
