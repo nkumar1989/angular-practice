@@ -13,7 +13,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { LandingComponent } from './landing/landing.component';
 import { UserHomeLoanDetailsComponent } from './user-home-loan-details/user-home-loan-details.component';
 import { HttpClientModule ,HTTP_INTERCEPTORS} from '@angular/common/http';
-import { AuthInterceptor } from './auth-interceptor.service';
+import { AuthInterceptorService } from './auth-interceptor.service';
 
 @NgModule({
   declarations: [
@@ -35,11 +35,13 @@ import { AuthInterceptor } from './auth-interceptor.service';
     HttpClientModule,
   ],
   providers: [
+
     {
       provide: HTTP_INTERCEPTORS,
-      useClass: AuthInterceptor,
-      multi: true
-    }
+      useClass: AuthInterceptorService,
+      multi: true,
+    },
+    
   ],
   bootstrap: [AppComponent]
 })
