@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-landing',
@@ -11,7 +12,7 @@ export class LandingComponent implements OnInit {
   role: string | null = '';
    isAdmin: boolean = false;
 
-  constructor(private router: Router) {}
+  constructor(private http: HttpClient,private router: Router) {}
 
   ngOnInit(): void {
     // Retrieve the username from localStorage

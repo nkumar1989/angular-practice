@@ -12,6 +12,8 @@ import { ApplicationSuccessComponent } from './application-success/application-s
 import { ReactiveFormsModule } from '@angular/forms';
 import { LandingComponent } from './landing/landing.component';
 import { UserHomeLoanDetailsComponent } from './user-home-loan-details/user-home-loan-details.component';
+import { HttpClientModule ,HTTP_INTERCEPTORS} from '@angular/common/http';
+import { AuthInterceptor } from './auth-interceptor.service';
 
 @NgModule({
   declarations: [
@@ -29,9 +31,16 @@ import { UserHomeLoanDetailsComponent } from './user-home-loan-details/user-home
     BrowserModule,
     AppRoutingModule,
     FormsModule, // Add this import here
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule,
   ],
-  providers: [],
+  providers: [
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: AuthInterceptor,
+      multi: true
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
