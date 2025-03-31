@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { HomeLoanOfferService } from '../home-loan-offer.service';
+import { HomeLoanOffer } from '../models/home-loan-offer';
 
 @Component({
   selector: 'app-home-loan-offers',
@@ -8,6 +9,7 @@ import { HomeLoanOfferService } from '../home-loan-offer.service';
   styleUrls: ['./home-loan-offers.component.css'],
 })
 export class HomeLoanOffersComponent implements OnInit {
+  [x: string]: any;
   offers = [];
   // offers = [
   //   {
@@ -33,7 +35,7 @@ export class HomeLoanOffersComponent implements OnInit {
   //   },
   // ];
 
-  loanOffers: any[] = [];
+  loanOffers: Array<HomeLoanOffer> |undefined 
   errorMessage = '';
 
   constructor(private loanOfferService: HomeLoanOfferService,private router: Router) {}
@@ -60,14 +62,14 @@ export class HomeLoanOffersComponent implements OnInit {
 
   fetchLoanOffers() {
     this.loanOfferService.getHomeLoanOffers().subscribe(
-      (data) => {
-        this.loanOffers = data;
-        console.log("data coming from backend::"+this.loanOffers)
-      },
-      (error) => {
-        console.error('Error fetching loan offers:', error);
-        this.errorMessage = error.error?.message || 'Failed to load loan offers';
+      res => {
+        this.loanOffers = res;
+        console.log("data coming from backend::"+JSON.stringify(this.loanOffers))
       }
+      //(error) => {
+      //  console.error('Error fetching loan offers:', error);
+     //   this.errorMessage = error.error?.message || 'Failed to load loan offers';
+      //}
     );
   }
 }

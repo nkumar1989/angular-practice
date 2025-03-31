@@ -14,6 +14,7 @@ import { LandingComponent } from './landing/landing.component';
 import { UserHomeLoanDetailsComponent } from './user-home-loan-details/user-home-loan-details.component';
 import { HttpClientModule ,HTTP_INTERCEPTORS} from '@angular/common/http';
 import { AuthInterceptorService } from './auth-interceptor.service';
+//import { AuthenticateService } from './authenticate.service';
 
 @NgModule({
   declarations: [
@@ -35,12 +36,12 @@ import { AuthInterceptorService } from './auth-interceptor.service';
     HttpClientModule,
   ],
   providers: [
-
-    {
+    //AuthenticateService,
+   {
       provide: HTTP_INTERCEPTORS,
       useClass: AuthInterceptorService,
-      multi: true,
-    },
+     multi: true,
+   },
     
   ],
   bootstrap: [AppComponent]

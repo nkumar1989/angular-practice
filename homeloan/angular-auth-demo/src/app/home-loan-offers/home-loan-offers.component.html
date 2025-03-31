@@ -4,24 +4,24 @@
         <thead>
             <tr>
                 <th>Offer ID</th>
-                <th>Bank</th>
+                <!--th>Bank</th-->
                 <th>Interest Rate</th>
                 <th>Max Loan Amount</th>
-                <th>Tenure</th>
+                <!--th>Tenure</th-->
             </tr>
         </thead>
-        <!-- <tbody>
-            <tr *ngFor="let offer of offers">
-                <td>{{ offer.offerId }}</td>
-                <td>{{ offer.bank }}</td>
-                <td>{{ offer.interestRate }}</td>
-                <td>{{ offer.maxLoanAmount }}</td>
-                <td>{{ offer.tenure }}</td>
+         <tbody>
+            <tr *ngFor="let offer of loanOffers">
+                <td>{{ offer.homeLoanOfferId }}</td>
+                <!--td>{{ offer.bank }}</td-->
+                <td>{{ offer.loanInterestRate }}</td>
+                <td>{{ offer.loanAmount }}</td>
+                <!--td>{{ offer.homeLoanOfferDetails.loanTenure }}</td-->
                 <td>
                     <button (click)="applyForLoan(offer)">Apply</button>
                 </td>
             </tr>
-        </tbody> -->
+        </tbody>
     </table>
 </div>
 <div class="navigation-buttons">
